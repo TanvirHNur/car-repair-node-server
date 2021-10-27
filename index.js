@@ -38,7 +38,7 @@ async function run(){
             res.json(result,'hello')
         });
 
-        //Get all data 
+        //Get all data from db
         app.get('/services', async (req, res)=> {
             const cursor =servicesCollection.find({});
             const services = await cursor.toArray();
