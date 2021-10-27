@@ -28,14 +28,14 @@ async function run(){
 
 
 
-        //POST API
+        //POST API  // send data from clientside
         app.post('/services', async (req,res) => {
             
             const service =req.body;
-            console.log('hiiting', service)
+            // console.log('hiiting', service)
             const result= await servicesCollection.insertOne(service);
-            console.log(result)
-            res.json(result)
+            // console.log(result)
+            res.json(result,'hello')
         });
 
         //Get all data 
