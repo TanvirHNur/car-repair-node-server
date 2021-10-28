@@ -64,20 +64,22 @@ async function run(){
         });
 
 
-        //checking
-        app.get('/hello', (req,res) =>{
-            res.send('hello, update is here')
-        })
+     
 
 
     }
     finally{
         // await client.close();
-    }
+    };
 
 }
 
 run().catch(console.dir);
+
+   //checking
+   app.get('/hello', (req,res) =>{
+    res.send('hello, update is here')
+})
 
 app.get('/', (req,res)=> {
     console.log('Practice practices')
